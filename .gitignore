@@ -1,0 +1,8 @@
+venv/
+.idea/
+src/staticfiles/
+
+*.pyc
+*.pyo
+src/db.sqlite3
+
