@@ -5,7 +5,7 @@ from common.models import Timestamped
 
 
 class Profile(Timestamped):
-    user                = models.OneToOneField(User)
+    user                = models.OneToOneField(User, on_delete=models.CASCADE)
     dob                 = models.DateField()
     divorced            = models.BooleanField(default=False)
     divorced_number     = models.SmallIntegerField(default=1)
@@ -30,5 +30,5 @@ class Profile(Timestamped):
 
 
 class Photos(Timestamped):
-    user                = models.ForeignKey(User)
+    user                = models.ForeignKey(User, on_delete=models.CASCADE)
     photo               = models.ImageField(upload_to='photos/')

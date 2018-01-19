@@ -18,7 +18,7 @@ INSTALLED_APPS = [
 
     'core',
     'profiles',
-    'messages',
+    'messaging',
 ]
 
 MIDDLEWARE = [
