@@ -6,12 +6,12 @@ from common.models import Timestamped
 
 class Profile(Timestamped):
     user                = models.OneToOneField(User, on_delete=models.CASCADE)
-    dob                 = models.DateField()
+    dob                 = models.DateField(blank=True, null=True)
     divorced            = models.BooleanField(default=False)
-    divorced_number     = models.SmallIntegerField(default=1)
+    divorced_number     = models.SmallIntegerField(blank=True, null=True)
     children            = models.BooleanField(default=False)
-    children_number     = models.SmallIntegerField(default=1)
-    description         = models.TextField()
+    children_number     = models.SmallIntegerField(blank=True, null=True)
+    description         = models.TextField(blank=True, null=True)
 
     def get_full_name(self):
         return self.user.get_full_name()

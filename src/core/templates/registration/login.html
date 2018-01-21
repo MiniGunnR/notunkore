@@ -1,0 +1,12 @@
+<form method="post" action="./?next={{ next }}">
+    {% csrf_token %}
+
+    <input type="text" name="username" id="username" autofocus/>
+    <input type="password" name="password" id="password"/>
+
+    <input type="submit" value="Login"/>
+</form>
+
+<hr/>
+
+<a href="{% url 'core:register' %}">Register</a>
